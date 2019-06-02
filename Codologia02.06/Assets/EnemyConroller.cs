@@ -39,6 +39,11 @@ public class EnemyConroller : MonoBehaviour
         }
         else
         {
+            if(Mathf.Approximately(rightBoundDist, 0))
+            {
+                isGoingLeft = true;
+            }
+
             this.transform.position = Vector2.MoveTowards(
                                                this.transform.position,
                                                RightBound.transform.position,
